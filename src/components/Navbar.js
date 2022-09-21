@@ -9,7 +9,6 @@ const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false)
 
     let sideNavbar
-    let sideNavMask
 
     if (showMobileMenu){
         sideNavbar =
@@ -17,13 +16,6 @@ const Navbar = () => {
             <li><NavLink to="/" >about</NavLink></li>
             <li><NavLink to="/blog">blog</NavLink></li>
         </ul>
-
-        sideNavMask =
-        <div
-            className="navMask"
-        >
-
-        </div>
     }
 
     return (
@@ -45,8 +37,6 @@ const Navbar = () => {
                     fill='white'
                 />
             </span>
-
-            { sideNavMask }
 
             { sideNavbar }
         </nav>

@@ -42,13 +42,6 @@
   display: block;
 }
 
-.navMask{
-  background: #000;
-  display: fixed;
-  top: 0;
-  left: 0;
-}
-
 .mobileButton{
   width: 80px;
   height: 80px;
