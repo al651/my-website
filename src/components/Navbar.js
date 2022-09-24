@@ -5,20 +5,36 @@ import React from 'react';
 
 import '../styles/Navbar.css'
 import { TiThMenu } from "react-icons/ti";
+import { TiTimes } from "react-icons/ti";
 
 
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false)
 
     let sideNavbar
+    let sideNavbutton
     var r = document.querySelector(':root');
 
     if (showMobileMenu){
         sideNavbar =
         <ul className="sideNavbar">
-            <li><NavLink to="/" >about</NavLink></li>
-            <li><NavLink to="/blog">blog</NavLink></li>
+            <li><NavLink to="/" onClick={() => setShowMobileMenu(!showMobileMenu)} >about</NavLink></li>
+            <li><NavLink to="/blog" onClick={() => setShowMobileMenu(!showMobileMenu)}>blog</NavLink></li>
         </ul>
+
+        sideNavbutton =
+        <TiTimes
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+            size={50}
+            fill={getTextColor()}
+        />
+    } else {
+        sideNavbutton =
+        <TiThMenu
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+            size={50}
+            fill={getTextColor()}
+        />
     }
 
     function getTextColor() {
@@ -39,11 +55,7 @@ const Navbar = () => {
             </ul>
 
             <span className="mobileButton">
-                <TiThMenu
-                    onClick={() => setShowMobileMenu(!showMobileMenu)}
-                    size={50}
-                    fill={getTextColor()}
-                />
+                { sideNavbutton }
             </span>
 
             { sideNavbar }

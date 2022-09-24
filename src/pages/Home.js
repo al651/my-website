@@ -3,7 +3,7 @@ import '../styles/Home.css';
 function Home() {
   return (
     <p className="content">
-          I am a student at the University of Portsmouth and currently I am undertaking a degree in {/* This comment literally fixes an issue by adding an extra space here */}
+          I am a student at the University of Portsmouth and currently I am undertaking a degree in {/* This comment literally fixes an issue by adding an extra space here. Pretty hacky */}
           <a className="courseLink" href="https://www.port.ac.uk/study/courses/bsc-hons-computing">
             Computing BSc
           </a>.

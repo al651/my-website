@@ -3,7 +3,9 @@
 :root {
   background-color: #2f3640;
   font-family: 'Space Mono', sans-serif;
-  
+
+
+  --background-color: #2f3640;
   --text-color: #f5f6fa;
   --text-secondary-color: black;
 
